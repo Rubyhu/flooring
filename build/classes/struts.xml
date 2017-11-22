@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+       	<action name="loginAction" class="com.action.UserAction" method="login">
+			<result name="loginError">/login.jsp</result>
+			<result name="loginSuccess">/admin.jsp</result>
+		</action>
+		<action name="RegAction" class="com.action.UserAction" method="reg">
+			<result name="regError">/register.jsp</result>
+			<result name="regSuccess">/login.jsp</result>
+		</action>
+		
+		
+		<!-- <action name="LogoutAction" class="com.action.UserAction" method="logout">
+			<result name="logoutSuccess">/index.jsp</result>
+		</action> -->
+		
+		<action name="loginout" class="com.action.UserAction" method="logout">
+			<result name="logoutSuccess">/index.jsp</result>
+		</action>
+		
+		<action name="ShowOneUserAction" class="com.action.UserAction" method="showOneUser">
+			<result name="ShowUser"  type="redirectAction">/ShowAllNewsAction</result>
+		</action>
+		<action name="ShowAllNewsAction" class="com.action.NewsAction" method="showAllNews">
+			<result name="ShowNews">/index.jsp</result>
+		</action>
+		
+		
+		<action name="ShowAllProOneAction" class="com.action.ProAction" method="showAllProOne">
+			<result name="ShowProOne">/pro.jsp</result>
+		</action>
+		<action name="ShowAllProTwoAction" class="com.action.ProAction" method="showAllProTwo">
+			<result name="ShowProTwo">/pro.jsp</result>
+		</action>
+		<action name="ShowAllProThreeAction" class="com.action.ProAction" method="showAllProThree">
+			<result name="ShowProThree">/pro.jsp</result>
+		</action>
+		<action name="ShowAllProFourAction" class="com.action.ProAction" method="showAllProFour">
+			<result name="ShowProFour">/pro.jsp</result>
+		</action>
+		<action name="ShowAllProFiveAction" class="com.action.ProAction" method="showAllProFive">
+			<result name="ShowProFive">/pro.jsp</result>
+		</action>
+		<action name="ShowAllProSixAction" class="com.action.ProAction" method="showAllProSix">
+			<result name="ShowProSix">/pro.jsp</result>
+		</action>
+		<action name="ShowAllProSeverAction" class="com.action.ProAction" method="showAllProSever">
+			<result name="ShowProSever">/pro.jsp</result>
+		</action>
+		
+		
+		<action name="ShowProInfoAction" class="com.action.ProAction" method="getPro">
+			<result name="showboth">/pro_det.jsp</result>
+		</action>
+		
+		<action name="ShowAllServiceAction" class="com.action.ServiceAction" method="showAllService">
+			<result name="ShowService">/service.jsp</result>
+		</action>
+		
+		
+	    <action name="ShowAllNewsOneAction" class="com.action.NewsAction" method="showAllNewsOne">
+			<result name="ShowNewsOne">/news.jsp</result>
+		</action>
+		<action name="ShowAllNewsTwoAction" class="com.action.NewsAction" method="showAllNewsTwo">
+			<result name="ShowNewsTwo">/news.jsp</result>
+		</action>
+		
+		<action name="RegContactAction" class="com.action.ContactAction" method="regContact">
+			<result name="regContactError">/contact.jsp</result>
+			<result name="regContactSuccess">/contact.jsp</result>
+		</action>
+		<action name="ShowAllContactAction" class="com.action.ContactAction" method="showAllContact">
+			<result name="ShowContact">/contact.jsp</result>
+		</action>
+		<action name="delContactAction" class="com.action.ContactAction" method="delContact">
+			<result name="delItem">/contactinfo.jsp</result>
+		</action>
+		
+		
+		 <action name="upNewsAction" class="com.action.UpAction" method="addNewInfo">
+			<result name="addNewsSuccess">/newsinfo.jsp</result>
+			<result name="addNewsError">/newsinfo.jsp</result>
+		</action>
+	    <action name="upServiceAction" class="com.action.UpAction" method="addserviceInfo">
+			<result name="addserviceSuccess">/serviceinfo.jsp</result>
+			<result name="addserviceError">/serviceinfo.jsp</result>
+		</action>
+		<action name="upProAction" class="com.action.UpAction" method="addproInfo">
+			<result name="addproSuccess">/proinfo.jsp</result>
+			<result name="addproError">/proinfo.jsp</result>
+		</action>
+		<action name="upProDelAction" class="com.action.UpAction" method="addproDelInfo">
+			<result name="addproDelSuccess">/prodelinfo.jsp</result>
+			<result name="addproDelError">/prodelinfo.jsp</result>
+		</action>
+		<action name="proAllAction" class="com.action.ProAction" method="showAllPro">
+			<result name="ShowAllPro">/prodelinfo.jsp</result>
+		</action>
+		
+
+	
+	
+    
+ 
+	
+			
+		
+	
+    </package>
+</struts>

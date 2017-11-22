@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+  <property name="hibernate.connection.password">123</property>
+  <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=floor</property>
+  <property name="hibernate.connection.username">hh</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+  <mapping resource="com/po/User.hbm.xml"/>
+  <mapping resource="com/po/Pro.hbm.xml"/>
+  <mapping resource="com/po/ProDet.hbm.xml"/>
+  <mapping resource="com/po/Service.hbm.xml"/>
+  <mapping resource="com/po/News.hbm.xml"/>
+  <mapping resource="com/po/Contact.hbm.xml"/>
+  
+ </session-factory>
+</hibernate-configuration>
